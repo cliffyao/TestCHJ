@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addClass</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+		.cls {
+			background-color: yellow;
+		}
+
+		.cls1 {
+			border: 3px solid blue ;
+		}
+	</style>
+	<script src="jquery-1.12.2.js"></script>
+	<script>
+		$(function() {
+			$("#btn1").click(function() {
+				/*$("div").addClass("cls");
+				$("div").addClass("cls1")*/
+				//$("div").addClass("cls").addClass("cls1")
+				$("div").addClass("cls cls1")
+			});
+			$("#btn2").click(function() {
+				//$("div").removeClass("cls1")
+				$("div").removeClass();
+			})
+		})
+	</script>
+</head>
+<body>
+	<input type="button" value="addClass" id="btn1">
+	<input type="button" value="removeClass" id="btn2">
+	<div></div>
+</body>
+</html>

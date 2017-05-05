@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text"/><br/>
+<input type="text"/><br/>
+<input type="text"/><br/>
+<input type="text"/><br/>
+<input type="text"/><br/>
+<input type="text"/><br/>
+<script>
+    var inputs = document.getElementsByTagName("input");
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].onkeyup = function (event) {
+            if(event.keyCode === 13) {
+                var next = this.nextElementSibling.nextElementSibling;
+                next.focus();
+            }
+        }
+    }
+</script>
+</body>
+</html>

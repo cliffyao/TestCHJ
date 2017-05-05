@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="http://www.baidu.com" id="skip">注册完毕，等待5秒自动跳转或者直接点击跳转</a>
+	<script>
+		var num = 5;
+		var timer = null;
+		var skip = document.getElementById("skip");
+		timer = setInterval(function(){
+			num--;
+			skip.innerHTML = "注册完毕，等待"+ num +"秒自动跳转或者直接点击跳转";
+			if(num === 0) {
+				clearInterval(timer);
+				location.href = skip.href;
+			}
+		},1000)
+	</script>
+</body>
+</html>

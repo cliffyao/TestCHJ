@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script src="jquery-1.12.2.js"></script>
+	<script>
+		$(function () {
+			/*$("#btn1").click(function () {
+				$("#box").slideUp(1000);
+			})
+			$("#btn2").click(function () {
+				$("#box").slideDown(800);
+			})
+			$("#btn3").click(function () {
+				$("#box").slideToggle(500);
+			})*/
+
+			$("#btn1").click(function () {
+				$("#box").fadeIn(600)
+			});
+			$("#btn2").click(function () {
+				$("#box").fadeOut(600)
+			})
+			$("#btn3").click(function () {
+				$("#box").fadeToggle(600)
+			})
+			$("#btn4").click(function () {
+				$("#box").fadeTo(600, 0.5n)
+			})
+		})
+	</script>
+</head>
+<body>
+	<input type="button" value="淡入" id="btn1">
+	<input type="button" value="淡出" id="btn2">
+	<input type="button" value="切换" id="btn3">
+	<input type="button" value="透明度" id="btn4">
+	<div id="box"></div>
+</body>
+</html>

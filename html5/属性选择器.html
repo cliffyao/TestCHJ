@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li[type~=hot] {
+			background-color: pink;
+		}
+		li[type^=sb] {
+			color: red;
+		}
+		li[type$=t] {
+			font-weight: 900;
+		}
+		li[type*=am] {
+			font-size: 40px;
+		}
+		li[type|=sb] {
+			border: 3px solid skyblue;
+		} 
+	</style>
+</head>
+<body>
+	<ul>
+		<li type="game">任天堂</li>
+		<li type="hot">牛肉</li>
+		<li type="meat hot">猪肉</li>
+		<li type="drink">可乐</li>
+		<li type="sb game">索尼</li>
+		<li type="fruit">西瓜</li>
+		<li type="sb-vegetable">花菜</li>
+		<li type="sb">苹果</li>
+	</ul>
+</body>
+</html> 

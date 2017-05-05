@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="" id="sel">
+		<option value="">A</option>
+		<option value="">B</option>
+		<option value="">C</option>
+		<option value="">D</option>
+	</select>
+	<input type="button" value="按钮" id="btn"/>
+	<script>
+		var sel = document.getElementById("sel");
+		var btn = document.getElementById("btn");
+		var options = sel.children;
+		btn.onclick = function () {
+			var random = parseInt( Math.random() * options.length );
+			options[random].selected = true;
+		}
+	</script>
+</body>
+</html>

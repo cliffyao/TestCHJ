@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新表单属性</title>
+	<style>
+		input {
+			width: 100%;
+			margin: 5px;
+		}
+		output {
+			width: 500px;
+			height: 500px;
+			border: 1px solid pink;
+		}
+	</style>
+</head>
+<body>
+	<form action="#" id="form">
+		<fieldset>
+			<legend>新表单属性</legend>
+			<input type="text" placeholder="请输入用户名">
+			<input type="number" placeholder="日了" autofocus>
+			<input type="file" multiple>
+			<input type="tel" name="mobile" autocomplete>
+			<input type="submit">
+			<output>哈哈</output>
+		</fieldset>
+	</form>
+
+	<input type="text" name="haha" form="form">
+</body>
+</html>

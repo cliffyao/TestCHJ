@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#demo {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<script>
+		var demo = document.getElementById("demo");
+		console.log( getStyle(demo, "left") );
+		function getStyle (obj , attr) {
+			if(window.getComputedStyle) {
+				return window.getComputedStyle(obj, null)[attr];
+			} else {
+				return obj.currentStyle[attr];
+			}
+		}
+	</script>
+</body>
+</html>

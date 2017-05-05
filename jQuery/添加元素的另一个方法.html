@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加元素的另一种方法</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+	<script src="jquery-1.12.2.js"></script>
+	<script>
+		$(function () {
+			$("#btn").click(function () {
+				var pObj = $("<p></p>");
+				pObj.text("哈哈股票");
+				pObj.appendTo( $("#box"))
+			})
+		})
+	</script>
+</head>
+<body>
+	<input type="button" value="create" id="btn"/>
+	<div id="box"></div>
+</body>
+</html>

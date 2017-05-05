@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>value</title>
+</head>
+<body>
+	<div id="box">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+		<input type="text">
+	</div>
+	<input type="button" value="按钮" id="btn"/>
+</body>
+<script>
+	var box = document.getElementById("box");
+	var inputs = box.getElementsByTagName("input");
+	for(var i = 0; i < inputs.length; i++) {
+		inputs[i].value = i;
+	}
+	var btn = document.getElementById("btn");
+	
+	btn.onclick = function () {
+		var str = "";
+		for(var i = 0; i < inputs.length; i++) {
+			str = str + inputs[i].value;
+		}
+		console.log(str);
+	}
+	
+</script>
+</html>

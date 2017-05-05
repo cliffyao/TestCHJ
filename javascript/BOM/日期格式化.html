@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date</title>
+</head>
+<body>
+	<script>
+		var d = new Date();
+		var a = new Date(1985,10,26);
+		var c = new Date("1987-7-11");
+		var e = new Date(1128096000000);
+		console.log(d);
+		console.log(a);
+		console.log(c);
+		console.log(e);
+		console.log(d.getMilliseconds());
+
+		var f = Date.parse("2015-11-2");
+		var g = Date.parse(2015,11,2);
+		console.log(f);
+		console.log(g);
+	</script>
+</body>
+</html>

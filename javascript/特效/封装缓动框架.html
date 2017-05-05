@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#demo {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">click</button>
+	<div id="demo"></div>
+	<script>
+	var btn = document.getElementById("btn");
+	var demo = document.getElementById("demo");
+	btn.onclick = function () {
+		animate(demo, {"left": 400, "top": 400, "width": 400})
+	}
+
+		function animate(obj, json) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+        	var flag = true;
+        	for(var k in json) {
+        		var leader = parseInt( getStyle(obj, k) ) || 0;
+        		var target = json[k];
+            var step = (target - leader) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            leader = leader + step;
+            obj.style[k] = leader + "px";
+            if (leader !== target) {
+                flag = false;
+            }
+            console.log("still running");
+          }
+          if(flag) {
+          	clearInterval(obj.timer);
+          }  
+        }, 15);
+    }
+
+		function getStyle (obj , attr) {
+			if(window.getComputedStyle) {
+				return window.getComputedStyle(obj, null)[attr];
+			} else {
+				return obj.currentStyle[attr];
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			border: 1px solid gray;
+
+		}
+		div:hover {
+			width: 300px;
+			background-color: hotpink;
+			transition-property: width, background;
+			transition-duration: 1s;
+			transition-delay: 1s,2s;
+			transition-timing-function:linear, ease;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

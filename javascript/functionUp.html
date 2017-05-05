@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function</title>
+</head>
+<body>
+	<script>
+		/*function getSum(x,y) {
+			var sum = 0;
+			for(var i = x; i <= y; i++) {
+				sum += i;
+			}
+			return sum;
+		}
+		alert( getSum(6,9) );
+		console.log()*/
+
+		//圆面积
+		/*function getArea(r) {
+			return Math.PI * r * r
+		}
+		console.log( getArea(1) )*/
+
+		//圆周长
+		/*function getPer(r) {
+			return 2 * Math.PI * r 
+		}
+		console.log( getPer(1) )*/
+
+		/*function getMax(a,b) {
+			return a>b ? a : b
+		}
+		console.log( getMax(1,2) )*/
+
+		/*function getMax(a,b,c) {
+			return (a > b ? a : b) > c ? (a > b ? a : b) : c
+		}
+
+		console.log( getMax(1,2,3) )*/
+/*
+		function getMax3 (a,b,c) {
+			return getMax( getMax(a,b), c)
+		}
+		console.log( getMax3(1,2,3) )*/
+		/*var arr = [1,2,3,4,5]
+		function getMax (arr) {
+			var max = arr[0];
+			for(var i = 0; i < arr.length; i++) {
+				if(max < arr[i]) {
+					max = arr[i];
+				}
+			}
+			return max;
+		}
+		console.log( getMax(arr) );
+		console.log( getMax([1,2,3,4,5,6]) )*/
+
+		/*var arr = [1,2,3,4,5,6];
+		function getMin (arr) {
+			var min = arr[0];
+			for(var i = 0; i < arr.length; i++) {
+				if(min > arr[i]) {
+					min = arr[i];
+				}
+			}
+			return min;
+		}
+		console.log( getMin(arr));
+		console.log( getMin([1,2,3,4,5]))*/
+/*
+		var arr = [1,2,3,4,5];
+
+		function reverse (arr) {
+			var newArr = [];
+			for(var i = arr.length-1; i>=0; i--) {
+				newArr[newArr.length] = arr[i];
+			}
+			return newArr;
+		}
+		console.log(arr);
+		console.log( reverse(arr) )*/
+/*
+		var arr = [2,4,5,23,77,1,55];
+		console.log(arr);
+		function sort (arr) {
+			
+			for(var i = 0; i < arr.length-1; i++) {
+				var flag = true;
+				for(var j = 0; j < arr.length-1-i; j++) {
+					if(arr[j] > arr[j+1]) {
+						flag = false;
+						var temp = arr[j];
+						arr[j] = arr[j+1];
+						arr[j+1] = temp
+					}
+				}
+				if(flag) {
+					break;
+				}
+			}
+			return arr;
+		}
+
+		console.log( sort(arr) );
+		console.log( sort([3,4,6,1,87,4,2]) )
+*/
+
+console.log("1""2")
+	</script>
+</body>
+</html>

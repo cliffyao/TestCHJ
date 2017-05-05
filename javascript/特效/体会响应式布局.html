@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	responsive();
+	window.onresize = function () {
+		responsive();
+	}
+
+	function responsive () {
+		if(client().width > 960) {
+			document.body.style.backgroundColor = "red";
+			document.body.innerHTML = "Computer";
+		} else if(client().width > 640) {
+			document.body.style.backgroundColor = "green";
+			document.body.innerHTML = "Tablet";
+		} else {
+			document.body.style.backgroundColor = "yellow";
+			document.body.innerHTML = "Mobile";
+		}
+	}
+
+		function client () {
+			return {
+				width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || 0,
+				height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || 0
+			};
+		}
+	</script>
+</body>
+</html>

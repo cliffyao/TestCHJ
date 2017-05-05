@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		document.onclick = function (event) {
+			var event = event || window.event;
+			//console.log("screen:" + event.screenX + "--" + event.screenY);
+			//console.log("client:" + event.clientX + "--" + event.clientY);
+			console.log(event.pageX);
+		}
+	</script>
+</body>
+</html>

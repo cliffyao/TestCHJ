@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<script>
+		var box = document.getElementById("box");
+		//console.log( getInnerText(box) )
+		setInnerText(box, "aaaaa")
+
+		function getInnerText (ele) {
+			if(typeof ele.innerText === "string") {
+				return ele.innerText;
+			} else {
+				return ele.textContent;
+			}
+		};
+
+		function setInnerText (element, content) {
+			if(typeof element.innerText === "string") {
+				element.innerText = content;
+			} else {
+				element.textContent = content;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+	<style>
+		span {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="txtName"><span></span><br/>
+	<input type="text" id="txtPwd">
+	<span></span><br/>
+	<input type="button" id="btn" value="注册">
+	<script>
+		var txtName = document.getElementById("txtName");
+		var txtPwd = document.getElementById("txtPwd");
+		txtName.onkeyup = function () {
+			if(this.value.length<3 || this.value.length>6) {
+				this.nextSibling.innerHTML = "用户名必须在3-6位之间";
+			} else {
+				this.nextSibling.innerHTML = "";
+			}
+		};
+		txtPwd.onkeyup =function () {
+			if(this.value.length<3 || this.value.length>6) {
+				//this.nextElementSibling.innerHTML = "用户名必须在3-6位之间";
+				getNextElement(this).innerHTML = "用户名必须在3-6位之间";
+			} else {
+				//this.nextElementSibling.innerHTML = "";
+				getNextElement(this).innerHTML = "";
+			}
+		};
+
+		function getNextElement(element) {
+			if(element.nextElementSibling) {
+				return element.nextElementSibling;
+			} else {
+				var next = element.nextSibling;
+				while(next && next.nodeType !== 1 ) {
+					next = next.nextSibling;
+				}
+				return next;
+			}
+		}
+	</script>
+</body>
+</html>

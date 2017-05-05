@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollHeight</title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			overflow: scroll;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多喝多很多很多</div>
+	<script>
+		var box = document.getElementById("box");
+		
+		box.onscroll = function () {
+			console.log(box.scrollHeight);
+		console.log(box.scrollTop);
+		}
+	</script>
+</body>
+</html>
