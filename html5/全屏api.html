@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>requestFullScreen</title>
+	<style>
+		body {
+			text-align: center;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			document.querySelector("input[type=button]").onclick = function () {
+				if(this.requestFullScreen) {
+					this.requestFullScreen();
+				} else if(this.webkitRequestFullScreen) {
+					this.webkitRequestFullScreen();
+				} else if(this.msRequestFullScreen) {
+					this.msRequestFullScreen();
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="设置全屏"/>
+</body>
+</html>
