@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件拖拽读取</title>
+	<style>
+		body, html {
+			height: 100%;
+		}
+		body {
+			margin: 0;
+			border: 10px dashed gray;
+		}
+	</style>
+</head>
+<body>
+	
+<script>
+	document.body.ondragover = function (e) {
+		e.preventDefault();
+	}
+	document.body.ondrop = function (e) {
+		e.preventDefault();
+		var reader = new FileReader();
+		reader.readAsDataURL(e.dataTransfer.files[0]);
+		reader.onload = function () {
+			document.body.style.background = "url("+ reader.result +") no-repeat center/cover";
+		}
+	}
+</script>
+</body>
+</html>

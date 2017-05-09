@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>web存储</title>
+	<style>
+		.container {
+			display: flex;
+			justify-content: center;
+		}
+		body {
+			text-align: center;
+		}
+		.container>div {
+			width: 100px;
+			height: 100px;
+			border: 1px solid gray;
+			margin: 0 10px;
+		}
+		.red {
+			background-color: red;
+		}
+		.skyblue {
+			background-color: skyblue;
+		}
+		.yellowgreen {
+			background-color: yellowgreen;
+		}
+		input {
+			margin: 10px 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="red"></div>
+		<div class="skyblue"></div>
+		<div class="yellowgreen"></div>
+	</div>
+	<input type="button" value="保存">
+	<input type="button" value="载入">
+	<input type="button" value="清除">
+	<script>
+		var boxes = document.querySelectorAll(".container>div");
+		for (var i = 0; i<boxes.length; i++) {
+			boxes[i].onclick = function () {
+				document.body.style.backgroundColor = getComputedStyle(this).backgroundColor;
+			}
+		}
+		document.querySelector("input[value=保存]").onclick = function () {
+			window.localStorage.setItem("myColor", getComputedStyle(document.body).backgroundColor);
+			alert("保存成功");
+		}
+		document.querySelector("input[value=载入]").onclick = function () {
+			document.body.style.backgroundColor = window.localStorage.getItem("myColor");
+			alert("载入成功");
+		}
+		document.querySelector("input[value=清除]").onclick = function () {
+			/*window.localStorage.removeItem("myColor");*/
+			window.localStorage.clear();
+			alert("清除成功");
+		}
+		window.onload = function () {
+			var bodyColor = window.localStorage.getItem("myColor");
+			if(bodyColor != null) {
+				document.body.style.backgroundColor = bodyColor;
+			} else {
+				alert("没有保存颜色哦~")
+			}
+		}
+	</script>
+</body>
+</html>
